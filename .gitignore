@@ -1,0 +1,8 @@
+**/__pycache__/**
+/build
+/dist
+/rep_align.egg-info
+/data
+/model_ckpts
+/notebooks
+*.ipynb
