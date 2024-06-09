@@ -39,4 +39,4 @@ optimization:
 
 logging:
   wandb: True
-  save_dir: ../src/models/checkpoints/cifar10_resnet34_cifar10_base
+  save_dir: ./model_ckpts/resnet34_cifar10_base

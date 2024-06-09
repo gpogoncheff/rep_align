@@ -70,7 +70,7 @@ def train_epoch(model, train_data, loss_fn, optimizer, lr_scheduler, epoch, devi
     return avg_loss, acc
 
 def train(model, train_data, evaluation_data, epochs, loss_fn, optimizer, lr_scheduler,
-          save_dir, save_freq=10, save_best=True, device='cuda'):
+          save_dir, save_freq=float('inf'), save_best=True, device='cuda'):
     train_losses, train_accs = [], []
     val_losses, val_accs = [], []
     best_val_loss = float('inf')
@@ -94,7 +94,7 @@ def train(model, train_data, evaluation_data, epochs, loss_fn, optimizer, lr_sch
             'best_val_loss': best_val_loss,
             'wandb_run_name': None if not WANDB else wandb.run.name,
         }
-        if epoch % save_freq == 0:
+        if ((epoch+1) % save_freq) == 0:
             torch.save(model_ckpt_data, os.path.join(save_dir, f'epoch_{epoch}.pt'))
         if save_best and val_loss < best_val_loss:
             torch.save(model_ckpt_data, os.path.join(save_dir, 'best_loss.pt'))
@@ -131,7 +131,7 @@ if __name__ == '__main__':
     if config_data['logging']['wandb']:
         WANDB = True
         wandb.init(
-            project='aligninterp',
+            project='repalign',
             config=dict(yaml=config_data)
         )
 

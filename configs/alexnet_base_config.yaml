@@ -20,4 +20,4 @@ optimization:
 
 logging:
   wandb: True
-  save_dir: ../src/models/tmp_cifar10_alexnet_base
+  save_dir: ../model_ckpts/alexnet_cifar10
