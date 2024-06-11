@@ -54,10 +54,10 @@ Some small details:
 
 ## Results
 
-| Model | Condition | CIFAR-10 Val Acc | II-LPIPS (Lower Score Suggests Greater Interpretability) |
-|:--|:--:|:--:|:--:|
-| ResNet-18 | Baseline     | $0.9325$ | $0.354 \pm 0.050$ |
-| ResNet-18 | Neural-Tuned | $0.8743$ | $0.322 \pm 0.040$ |
+| Model | Condition | Brain Area Tuned | CIFAR-10 Val Acc | II-LPIPS (Lower Score Suggests Greater Interpretability) |
+|:--|:--:|:--:|:--:|:--:|
+| ResNet-18 | Baseline     | None | $0.9325$ | $0.354 \pm 0.050$ |
+| ResNet-18 | Neural-Tuned | V4   | $0.8743$ | $0.322 \pm 0.040$ |
 
 Notes:
 - II submetrics reported as mean +/- std dev across all neurons from ResNet-18 Layer 4 (the neuron activations that directly predict NSD neural activity) of the network
