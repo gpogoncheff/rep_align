@@ -21,7 +21,7 @@ If, by doing this, there are some details I skipped over that you are curious ab
 
 ## Hypothesis
 
-**A quick backround before the hypothesis**: The ventral stream is a processing pathway in the human visual cortex theorized to play a particularly important role in visual object recognition.  Neurons in higher-order cortical areas in this processing pathway are thought to encode information relevant to shape, texture, object parts, faces, and plenty more.  Although plenty of these neurons are thought to exhibit mixed selectivity (e.g., are polysemantic, responding to unrelated concepts), some suggest (such as in [here for example](https://www.jneurosci.org/content/43/10/1731)) that these neurons encode semantically meaningful information.
+**A quick backround before the hypothesis**: The ventral stream is a processing pathway in the human visual cortex theorized to play a particularly important role in visual object recognition.  Neurons in higher-order cortical areas in this processing pathway are thought to encode information relevant to shape, texture, object parts, faces, and plenty more.  Although plenty of these neurons are thought to exhibit mixed selectivity (e.g., are polysemantic, responding to unrelated concepts), some suggest (such as in [here for example](https://www.jneurosci.org/content/43/10/1731)) that there are many neurons that encode semantically meaningful (i.e., interpretable) information.
 
 **Hypothesis**: By fine-tuning an image model to predict neural activity in high-order areas of the ventral stream, the image model will learn to encode features that tend to be more interpretable (semantically more meaningful).
 
