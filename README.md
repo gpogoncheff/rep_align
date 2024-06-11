@@ -39,7 +39,7 @@ Investigated models include:
 - [Natural Scenes Dataset](https://naturalscenesdataset.org/): large-scale fMRI dataset consisting of whole-brain fMRI measurements of 8 humans while viewing images from MS COCO.
 
 ### Evaluating Interpretability
-Quantifying interpretability is an open challenge.  In this project, I use an automated metric, the [Interpretability Index](https://arxiv.org/pdf/2310.11431) (II) (David Klindt et al.) to quickly quantify how interpretable model features are.  In short, this metric quantifies how interpretable a neuron is based on similarities among the neuron's Maximally Exciting Images (i.e., the images that cause maximal activation for the neuron).  Multiple metrics can be used to evaluate MEI similarity, but here we focus on II-LPIPS, the pairwise learned perceptual image patch similarity ([LPIPS](https://github.com/richzhang/PerceptualSimilarity)) across MEIs, which was shown by Klindt et al. to correlated well with human measures of interpretability.
+Quantifying interpretability is an open challenge.  In this project, I use an automated metric, the [Interpretability Index](https://arxiv.org/pdf/2310.11431) (II) (David Klindt et al.) to quickly quantify how interpretable model features are.  In short, this metric quantifies how interpretable a neuron is based on similarities among the neuron's Maximally Exciting Images (i.e., the images that cause maximal activation for the neuron).  Multiple metrics can be used to evaluate MEI similarity, but here we focus on II-LPIPS, the pairwise learned perceptual image patch similarity loss ([LPIPS](https://github.com/richzhang/PerceptualSimilarity)) across MEIs, which was shown by Klindt et al. to correlated well with human measures of interpretability.
 
 In this 
 
@@ -56,7 +56,7 @@ Some small details:
 
 ## Results
 
-| Model | Condition | CIFAR-10 Val Acc | II-LPIPS |
+| Model | Condition | CIFAR-10 Val Acc | II-LPIPS (Lower Score Suggests Greater Interpretability) |
 |:--|:--:|:--:|:--:|
 | ResNet-18 | Baseline     | $0.9325$ | $0.354 \pm 0.050$ |
 | ResNet-18 | Neural-Tuned | $0.8743$ | $0.322 \pm 0.040$ |
