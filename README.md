@@ -41,8 +41,6 @@ Investigated models include:
 ### Evaluating Interpretability
 Quantifying interpretability is an open challenge.  In this project, I use an automated metric, the [Interpretability Index](https://arxiv.org/pdf/2310.11431) (II) (David Klindt et al.) to quickly quantify how interpretable model features are.  In short, this metric quantifies how interpretable a neuron is based on similarities among the neuron's Maximally Exciting Images (i.e., the images that cause maximal activation for the neuron).  Multiple metrics can be used to evaluate MEI similarity, but here we focus on II-LPIPS, the pairwise learned perceptual image patch similarity loss ([LPIPS](https://github.com/richzhang/PerceptualSimilarity)) across MEIs, which was shown by Klindt et al. to correlated well with human measures of interpretability.
 
-In this 
-
 Is this metric perfect?  Probably not.  Is it insightful?  I think so.  The paper is pretty cool, check it out!
 
 ### Approach
