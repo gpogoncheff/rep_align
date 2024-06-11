@@ -7,3 +7,5 @@
 /notebooks
 /wandb
 *.ipynb
+!tune_nsd.ipynb
+*.pkl
