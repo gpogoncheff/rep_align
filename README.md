@@ -69,7 +69,7 @@ So thats pretty neat!  Quantitatively, according to II metrics, the neural tuned
 
 Original task performance does drop quite a bit, but this may be something that could be managed with a larger tuning dataset (here, I am only using a subset of the NSD dataset), incorporating the original training data into the tuning process, and diligent training + hyperparameter selection.
 
-I'm excited to apply this same technique to more images models (and maybe even on language models with similar techniques), and this will be important to understand if this approach generalizes (or if I just got lucky (unlucky hope?) with a ResNet-18 model trained on a toy task).
+I'm excited to apply this same technique to more images models (and maybe even on language models with similar techniques), and this will be important to understand if this approach generalizes (or if I just got lucky (unlucky false optimism?) with a ResNet-18 model trained on a toy task).
 
 I think this is kind of cool though -- altering model characteristics (in a potentially favorable way in terms of AI safety (though of course, the tuned model is still not "read out the algorithm" interpretable)) by aligning its representations with the human brain.  Could more be in store in terms of Human-AI alignment via alignment of their representations?
 
@@ -77,7 +77,7 @@ I think this is kind of cool though -- altering model characteristics (in a pote
 
 Basline training image models on CIFAR-10: ```python /path/to/config.py``` (see ```/configs``` for example configuration files)
 
-Fine-tuning with NSD data: Refactored code coming soon... (in the meantime, checkout tune_nsd.ipynb for a *VERY* rough notebook with tuning code)
+Fine-tuning with NSD data: Refactored code coming soon... (in the meantime, checkout ```tune_nsd.ipynb``` for a *VERY* rough notebook with tuning code)
 
 More to come soon...
 
