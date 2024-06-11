@@ -104,3 +104,30 @@ def get_ii_label(labels, aggregate=False):
     if aggregate:
         sim = np.mean(sim.astype(np.float32)).item()
     return sim
+
+def evaluate_interp_index(model, layer_id, train_data=None, val_data=None, 
+                          n_meis=5, mei_aggregation='center', device='cuda'):
+    results = {}
+    lpips_transform = transforms.Compose([
+        transforms.Resize(64),
+        transforms.Lambda(lambda x: x.to(torch.float32)/255.),
+        transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
+    ])
+    for data_id, dataset in tqdm(zip(['train', 'val'], [train_data, val_data])):
+        if dataset is None:
+            results[data_id] = {}
+            continue
+        meis, mei_labels = get_meis(n_meis, model, layer_id, dataset, 
+                                    aggregation=mei_aggregation, device=device)
+        ii_color, ii_lpips, ii_label = [], [], []
+        for direction_i in range(len(meis)):
+            ii_color.append(get_ii_color(meis[direction_i], aggregate=True))
+            ii_lpips.append(get_ii_lpips('alex', meis[direction_i], lpips_transform, device=device))
+            ii_label.append(get_ii_label(mei_labels[direction_i], aggregate=True))
+        results[data_id] = {
+            'mei_data': (meis.clone().cpu().numpy(), mei_labels.clone().cpu().numpy()),
+            'ii_lpips': np.array(ii_lpips),
+            'ii_color': np.array(ii_color),
+            'ii_label': np.array(ii_label)
+        }
+    return results
