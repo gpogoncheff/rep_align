@@ -59,7 +59,7 @@ Some small details:
 
 Notes:
 - II submetrics reported as mean +/- std dev across all neurons from ResNet-18 Layer 4 (the neuron activations that directly predict NSD neural activity) of the network
-- All significant?
+- Difference in II-LPIPS is statistically significiant ($p < 0.01$, one-way anova)
 
 ## So What?
 
@@ -73,7 +73,11 @@ I think this is kind of cool though -- altering model characteristics (in a pote
 
 ## Running this code
 
-Coming soon...
+Basline training image models on CIFAR-10: ```python /path/to/config.py``` (see ```/configs``` for example configuration files)
+
+Fine-tuning with NSD data: Refactored code coming soon... (in the meantime, checkout tune_nsd.ipynb for a very rough notebook with tuning code)
+
+
 
 ## Whats next?
 Stay tuned to this github repo for a lot more experiments to come.  Notably, probing beyond interpretability and deeper into representational alignment-based behavior tuning.
