@@ -1,5 +1,9 @@
 # Towards Behavioral-Alignment via Representation Alignment
 
+Galen Pogoncheff
+
+AI Alignment Mini-Project, Spring 2024
+
 ## Can Neural Encoding Strategies in Humans be Useful for AI Alignment?
 
 Representational alignment is an emerging field at the intersection of neuroscience and artificial intelligence, focusing on the parallels between neural representations in the human brain and those in deep neural networks.
@@ -71,12 +75,13 @@ I'm excited to apply this same technique to more images models (and maybe even o
 
 I think this is kind of cool though -- altering model characteristics (in a potentially favorable way in terms of AI safety (though of course, the tuned model is still not "read out the algorithm" interpretable)) by aligning its representations with the human brain.  Could more be in store in terms of Human-AI alignment via alignment of their representations?
 
-## Running this code
+## Running this code and neural-tuning your own models
 
 Basline training image models on CIFAR-10: ```python /path/to/config.py``` (see ```/configs``` for example configuration files)
 
-Fine-tuning with NSD data: Refactored code coming soon... (in the meantime, checkout tune_nsd.ipynb for a very rough notebook with tuning code)
+Fine-tuning with NSD data: Refactored code coming soon... (in the meantime, checkout tune_nsd.ipynb for a *VERY* rough notebook with tuning code)
 
+More to come soon...
 
 
 ## Whats next?
