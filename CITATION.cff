@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Using these methods/code? A citation would be well appreciated."
+authors:
+- family-names: "Pogoncheff"
+  given-names: "Galen"
+  orcid: "https://orcid.org/0000-0001-6248-0992"
+title: "Towards Behavioral-Alignment via Model-Brain Representation Alignment"
+version: 0.0.0
+date-released: 2024-06-10
+url: "https://github.com/gpogoncheff/rep_align"
