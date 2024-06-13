@@ -89,3 +89,16 @@ Stay tuned to this github repo for a lot more experiments to come.  Notably, pro
 See something wrong? Want to contribute in making the next steps? Have some related work or ideas youd like to chat about or want a collaborator for? Want to chat with a new friend?
 
 Reach out -- I'd love to hear your thoughts.
+
+##
+Interested in using these methods/code?
+```
+@software{Pogoncheff_Towards_Behavioral-Alignment_via_2024,
+author = {Pogoncheff, Galen},
+month = jun,
+title = {{Towards Behavioral-Alignment via Model-Brain Representation Alignment}},
+url = {https://github.com/gpogoncheff/rep_align},
+version = {0.0.0},
+year = {2024}
+}
+```
